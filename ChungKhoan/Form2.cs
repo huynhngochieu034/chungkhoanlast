@@ -15,21 +15,28 @@ namespace ChungKhoan
 
         private ListView listViewTapD;
         private ListView listViewMaHoa;
-        private List<int> listKhoiTao = new List<int>();
-        private int k = 0;
-        private string tempChar = "";
-        private List<string> listToTapL = new List<string>();
+        private List<int> listKhoiTao;
+        private int k;
+        private string tempChar;
+        private List<string> listToTapL;
         private int SoUngVien;
-        private int countPre = 0;
+        private int countPre;
 
         public Form2(ListView listViewD, ListView listViewDetail)
         {
             InitializeComponent();
+
+            listViewTapD = new ListView();
+            listViewMaHoa = new ListView();
+            listKhoiTao = new List<int>();
+            listToTapL = new List<string>();
+            k = 0;
+            countPre = 0;
+            tempChar = "";
+            SoUngVien = Program.listMahoa.Count;
+
             this.listViewTapD = listViewD;
             this.listViewMaHoa = listViewDetail;
-
-
-            SoUngVien = Program.listMahoa.Count;
 
             listView1.Columns.Add("NGAY");
             listView1.Columns.Add("UNG VIEN");
@@ -263,7 +270,7 @@ namespace ChungKhoan
                 k++;
                 TapFToListView(Program.listTapF[k]);
                 TapLToListView(Program.listTapL[k]);
-
+                button1.Enabled = true;
                 countPre--;
             }
             else

@@ -12,13 +12,13 @@ namespace ChungKhoan
      static class Program
     {
         //normal
-        //public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOAN;Integrated Security=True";
+        public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOAN;Integrated Security=True";
 
         //100k records
-       ///public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOANTESTLAST;Integrated Security=True";
+       //public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOANTESTLAST;Integrated Security=True";
 
         //500k records
-        public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOANTEST;Integrated Security=True";
+        //public static String connnectionString = "Data Source=DESKTOP-7V9QME6\\SQLEXPRESS;Initial Catalog=CHUNGKHOANTEST;Integrated Security=True";
         
          public static List<MaHoa> listMahoa = new List<MaHoa>();
         public static List<TapF> listTapF = new List<TapF>();

@@ -37,13 +37,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tb_trackbar)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(662, 73);
+            this.button1.Location = new System.Drawing.Point(662, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 28);
             this.button1.TabIndex = 0;
@@ -53,16 +54,16 @@
             // 
             // lv_conf
             // 
-            this.lv_conf.Location = new System.Drawing.Point(32, 124);
+            this.lv_conf.Location = new System.Drawing.Point(34, 137);
             this.lv_conf.Name = "lv_conf";
-            this.lv_conf.Size = new System.Drawing.Size(967, 350);
+            this.lv_conf.Size = new System.Drawing.Size(967, 355);
             this.lv_conf.TabIndex = 1;
             this.lv_conf.UseCompatibleStateImageBehavior = false;
             this.lv_conf.View = System.Windows.Forms.View.Details;
             // 
             // tb_trackbar
             // 
-            this.tb_trackbar.Location = new System.Drawing.Point(385, 73);
+            this.tb_trackbar.Location = new System.Drawing.Point(385, 86);
             this.tb_trackbar.Maximum = 100;
             this.tb_trackbar.Name = "tb_trackbar";
             this.tb_trackbar.Size = new System.Drawing.Size(218, 45);
@@ -72,7 +73,7 @@
             // lb_conf
             // 
             this.lb_conf.AutoSize = true;
-            this.lb_conf.Location = new System.Drawing.Point(480, 57);
+            this.lb_conf.Location = new System.Drawing.Point(480, 70);
             this.lb_conf.Name = "lb_conf";
             this.lb_conf.Size = new System.Drawing.Size(16, 13);
             this.lb_conf.TabIndex = 3;
@@ -81,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(416, 57);
+            this.label1.Location = new System.Drawing.Point(416, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 4;
@@ -90,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(502, 57);
+            this.label2.Location = new System.Drawing.Point(502, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 13);
             this.label2.TabIndex = 5;
@@ -99,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 73);
+            this.label3.Location = new System.Drawing.Point(364, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 6;
@@ -108,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(598, 73);
+            this.label4.Location = new System.Drawing.Point(596, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 7;
@@ -125,11 +126,22 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "SINH LUẬT";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 486);
+            this.ClientSize = new System.Drawing.Size(1040, 504);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

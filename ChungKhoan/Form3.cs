@@ -27,7 +27,10 @@ namespace ChungKhoan
         {
             InitializeComponent();
             this.k = k;
-           
+
+            if (Form1.checkTangGiam == 1)
+                label6.Text = "CÁC CỔ PHIẾU CÙNG TĂNG";
+            else label6.Text = "CÁC CỔ PHIẾU CÙNG GIẢM";
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -362,6 +365,11 @@ namespace ChungKhoan
         private void tb_trackbar_Scroll(object sender, EventArgs e)
         {
             lb_conf.Text = tb_trackbar.Value + "";
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
