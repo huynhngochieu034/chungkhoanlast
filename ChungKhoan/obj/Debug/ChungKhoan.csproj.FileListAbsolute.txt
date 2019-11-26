@@ -18,3 +18,14 @@ C:\Users\huynh\OneDrive\Desktop\chungkhoan\ChungKhoan\obj\Debug\ChungKhoan.Form2
 C:\Users\huynh\OneDrive\Desktop\chungkhoan\ChungKhoan\obj\Debug\ChungKhoan.Properties.Resources.resources
 C:\Users\huynh\OneDrive\Desktop\chungkhoan\ChungKhoan\obj\Debug\ChungKhoan.csproj.GenerateResource.Cache
 C:\Users\huynh\OneDrive\Desktop\chungkhoan\ChungKhoan\obj\Debug\ChungKhoan.Form3.resources
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\bin\Debug\ChungKhoan.exe.config
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.exe
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.pdb
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\bin\Debug\ChungKhoan.exe
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\bin\Debug\ChungKhoan.pdb
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.csprojResolveAssemblyReference.cache
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.Form1.resources
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.Form2.resources
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.Form3.resources
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.Properties.Resources.resources
+C:\Users\huynh\OneDrive\Desktop\chungkhoanlast\ChungKhoan\obj\Debug\ChungKhoan.csproj.GenerateResource.Cache

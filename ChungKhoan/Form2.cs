@@ -154,6 +154,8 @@ namespace ChungKhoan
 
             List<string> arrTemp = new List<string>();
             string result;
+            string str1, str2, strLast1, strLast2;
+
             if (k == 1)
             {
                 for (int i = 0; i < listString.Count; i++)
@@ -168,38 +170,27 @@ namespace ChungKhoan
             {
                 for (int i = 0; i < listString.Count; i++)
                 {
-             
+
                     for (int j = i + 1; j < listString.Count; j++)
                     {
+                       
+                        str1 = xoaPhanTuCuoi(listString[i]);
+                        strLast1 = tempChar.Trim();
+                        tempChar = "";
 
-                        if (listString[i].Remove(listString[i].Length - demLastString(listString[i])).Trim()
-                            .CompareTo(listString[j].Remove(listString[j].Length - demLastString(listString[j])).Trim()) == 0)
+                        str2 = xoaPhanTuCuoi(listString[j]);
+                        strLast2 = tempChar.Trim();
+                        tempChar = "";
+
+                        if (str1.CompareTo(str2) == 0)
                         {
-                            result = listString[i].Remove(listString[i].Length - demLastString(listString[i])).Trim()
-                                + " " + listString[i].Remove(0, listString[i].Length - demLastString(listString[i])).Trim()
-                                + " " + listString[j].Remove(0, listString[j].Length - demLastString(listString[j])).Trim();
-
+                            result = str1 + " " + strLast1 + " " + strLast2;
                             arrTemp.Add(result);
                         }
                     }
                 }
-
             }
             return arrTemp;
-        }
-
-        private int demLastString(string str)
-        {
-            int dem = 0;
-            for (int i = str.Length - 1; i >= 0; i--)
-            {
-                dem++;
-                if (str[i] == ' ')
-                {
-                    break;
-                }
-            }
-            return dem;
         }
 
         private string xoaPhanTuCuoi(string str)
@@ -309,6 +300,7 @@ namespace ChungKhoan
                 MessageBox.Show("Thuật toán kết thúc!");
                 Form3 frm = new Form3(k);
                 frm.ShowDialog();
+                k--;
                 return;
             }
 
@@ -353,6 +345,7 @@ namespace ChungKhoan
                 MessageBox.Show("Thuật toán kết thúc!");
                 Form3 frm = new Form3(k);
                 frm.ShowDialog();
+                k--;
                 return;
             }
 
