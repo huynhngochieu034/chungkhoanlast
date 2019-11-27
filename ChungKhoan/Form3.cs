@@ -14,19 +14,26 @@ namespace ChungKhoan
     public partial class Form3 : Form
     {
         private int k = 0;
-        List<string> List_Full = new List<string>();
-        List<string> List_R = new List<string>();
-        List<string> List_L = new List<string>();
-        List<int> List_sup = new List<int>();
-        List<int> List_supR = new List<int>();
+        List<string> List_Full;
+        List<string> List_R;
+        List<string> List_L;
+        List<int> List_sup;
+        List<int> List_supR;
         // List<string> list_ten = new List<string>();
         // List<KeyValuePair<string, string>> list_ten = new List<KeyValuePair<string, string>>();
-        Dictionary<string, string> list_ten = new Dictionary<string, string>();
+        Dictionary<string, string> list_ten;
 
         public Form3(int k)
         {
             InitializeComponent();
             this.k = k;
+
+            List_Full = new List<string>();
+            List_R = new List<string>();
+            List_L = new List<string>();
+            List_sup = new List<int>();
+            List_supR = new List<int>();
+            list_ten = new Dictionary<string, string>();
 
             if (Form1.checkTangGiam == 1)
                 label6.Text = "CÁC CỔ PHIẾU CÙNG TĂNG";
@@ -282,53 +289,49 @@ namespace ChungKhoan
         }
         public void Ket_Qua_1(int tb_conf)
         {
-            lv_conf.Columns.Add("Luật sinh ra");
+            lv_conf.Columns.Add("Stt");
+            lv_conf.Columns.Add(" Luật sinh ra");
+            // lv_conf.Columns.Add(" Luật sinh ra");
+            // lv_conf.Columns.Add(" Luật sinh ra");
             lv_conf.Columns.Add(" %");
-
+            int dem = 0;
             for (int i = 0; i < List_sup.Count; i++)
             {
                 double conf = Math.Round(((double)List_sup[i] / List_supR[i]) * 100);
                 ListViewItem lv_Item = new ListViewItem();
-                int dem = 0;
+
                 string abc = "";
                 string abcd = "";
                 if (conf >= tb_conf)
                 {
-                    dem = i + 1;
+                    dem = dem + 1;
 
                     string[] listtemp = List_R[i].Split(' ');
                     string[] listtemp1 = List_L[i].Split(' ');
                     int j = 0;
                     for (j = 0; j < listtemp.Length; j++)
                     {
-                        // abc = abc +", "+ getNameMaHoa(listtemp[j]);
-                        //  abcd = abcd + ", " + getNameMaHoa(listtemp1[j]);
                         abc = abc + ", " + getName(listtemp[j]);
-                        // abcd = abcd + ", " + getNameCP(getNameMaHoa(listtemp1[j]));
                     }
                     for (j = 0; j < listtemp1.Length; j++)
                     {
-                        // abc = abc + ", " + getNameMaHoa(listtemp[j]);
-                        // abcd = abcd + ", " + getNameMaHoa(listtemp1[j]);
-                        //abc = abc + ", " + getNameCP(getNameMaHoa(listtemp[j]));
                         abcd = abcd + ", " + getName(listtemp1[j]);
                     }
-                    lv_Item.Text = abc.Remove(0, 1) + " ==> " + abcd.Remove(0, 1);
-                    //lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = List_supR[i].ToString() });
+                    lv_Item.Text = dem.ToString();
+                    // lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = List_supR[i].ToString() });
                     // lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = List_sup[i].ToString() });
                     //lv_Item.Text = List_Full[i].Trim();
+                    lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = abc.Remove(0, 1) + " ==> " + abcd.Remove(0, 1) });
                     lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = conf.ToString() + " %" });
-                    lv_Item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = dem.ToString() });
                     lv_conf.Items.Add(lv_Item);
                     // Console.WriteLine(List_R[i] + "==>" + List_L[i] + "  : " + conf);
 
                 }
-
-
             }
             lv_conf.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             lv_conf.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
+
 
         public void Ket_Qua(int tb_conf)
         {

@@ -148,9 +148,12 @@ namespace ChungKhoan
                 dem = listKhoiTao.Where(temp => temp.Equals(number))
                     .Select(temp => temp)
                     .Count();
-     
-                tapl.Add(number.ToString(), dem);
-                dem = 0;
+
+                if ((dem * 100) / SoUngVien >= Program.minSup)
+                {
+                    tapl.Add(number.ToString(), dem);
+
+                }
             }
             Program.listTapL.Add(tapl);
             TapLToListView(tapl);

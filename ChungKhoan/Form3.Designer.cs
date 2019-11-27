@@ -152,7 +152,7 @@
             this.Controls.Add(this.lv_conf);
             this.Controls.Add(this.button1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tb_trackbar)).EndInit();
             this.ResumeLayout(false);
