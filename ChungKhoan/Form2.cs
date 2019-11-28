@@ -286,6 +286,15 @@ namespace ChungKhoan
             string resultLast;
             string resultNearLast;
             bool checkFNull = true;
+
+            if (!Program.listTapL[k].Any() || Program.listTapL[k].Count ==1)
+            {
+                MessageBox.Show("Thuật toán kết thúc!");
+                Form3 frm = new Form3(k);
+                frm.ShowDialog();
+                k--;
+                return;
+            }
            
             foreach (var t in Program.listTapL[k])
             {
