@@ -60,7 +60,6 @@ namespace ChungKhoan
             foreach (var t in tapf)
             {
 
-
                 foreach (string str in t.Value)
                 {
                     strBuild.Append(str);
@@ -73,11 +72,9 @@ namespace ChungKhoan
                 strBuild.Length--;
                 strBuild.Length--;
 
-                
                 listView1.Items.Add(t.Key);
                 listView1.Items[i++].SubItems.Add(strBuild.ToString());
                 
-
                 strBuild.Clear();
             }
 
@@ -149,11 +146,7 @@ namespace ChungKhoan
                     .Select(temp => temp)
                     .Count();
 
-                if ((dem * 100) / SoUngVien >= Program.minSup)
-                {
-                    tapl.Add(number.ToString(), dem);
-
-                }
+                tapl.Add(number.ToString(), dem);          
             }
             Program.listTapL.Add(tapl);
             TapLToListView(tapl);
@@ -366,7 +359,7 @@ namespace ChungKhoan
         private void TapF_To_TapL(List<string> listSTR)
         {
             List<string> tempSTR = new List<string>();
-
+            bool checkLNull = true;
             model.TapL tapl = new model.TapL();
             tapl.Lable = "Tập L" + ((k + 2).ToString());
 
@@ -381,9 +374,19 @@ namespace ChungKhoan
                     .Count();
                 //Console.WriteLine("Find Value: "+findValue+" : "+count);
                 if ((count * 100) / SoUngVien >= Program.minSup)
-                {                 
+                {
+                    checkLNull = false;
                     tapl.Add(findValue, count);
                 }
+            }
+
+            if (checkLNull == true)
+            {
+                MessageBox.Show("Thuật toán kết thúc!");
+                Form3 frm = new Form3(k);
+                frm.ShowDialog();
+                k--;
+                return;
             }
             Program.listTapL.Add(tapl);
             TapLToListView(tapl);
